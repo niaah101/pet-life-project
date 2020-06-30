@@ -16,6 +16,11 @@ banner {
   height: 12em;
   margin: auto;
   padding-bottom: 10px;
+} 
+
+header {
+  display: flex;
+
 }
 
 p {
@@ -51,15 +56,15 @@ h2 {
 
   .main-nav {
     text-align: center;
-	  display: block;
 	  padding: 5px 10px;
   }
 
   .main-nav li {
     align-items:;
     color: rgb(245, 245, 155);
-    font-size: 1.5em;
+    font-size: 1.2em;
     list-style: none;
+    justify-content: space-evenly;
 }
 
 .intro,
@@ -149,12 +154,5 @@ h2 {
 
   }
 
-	/* ---- Float clearfix ---- */
-
-	/* .clearfix::after {
-		content: " ";
-		display: table;
-		clear: both;
-	} */
 
 }

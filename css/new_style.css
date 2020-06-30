@@ -1,0 +1,277 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* ================================= 
+  Base Element Styles
+==================================== */
+body{
+   font-family: sans-serif;
+   background: black;
+}
+
+nav{
+    background: black;
+    padding: 5px 20px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    color: rgb(236, 235, 140);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+banner {
+    display: flex;
+    height: 15em;
+    margin: auto;
+    padding: 15px 15px;
+} 
+
+h2 {
+    color:pink;
+}
+/* ================================= 
+  Class Styles
+==================================== */
+
+.menu{
+    border-bottom: white solid;
+}
+
+
+.menu li{
+    font-size: 16px;
+    padding: 15px 5px;
+}
+
+.menu li a{
+    display: block;
+}
+
+.logo a{
+    font-size: 20px;
+}
+
+.button .secondary{
+    border-bottom:1px grey;
+}
+
+.name {
+    display: flex;
+    height: 7em;
+    margin: auto;
+    padding-bottom: 10px;
+    justify-content: center;
+    color:  rgb(176, 168, 175);
+}
+
+.shorkie{
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main-content{
+    display: flex;
+}
+
+
+.column {
+    font-size: 1em;
+    color:grey;
+    flex: 1;
+    justify-content: space-between;
+    flex-basis: 30%;
+}
+
+.column:nth-child(1){
+    background: lightyellow;
+}
+.column:nth-child(2){
+    background: lightskyblue;
+}
+.column:nth-child(3){
+    background: lightseagreen;
+}
+
+
+/* ================================= 
+  Hamburger Menu
+==================================== */
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle{
+    order: 1;
+    cursor: pointer;
+}
+
+item.button{
+    order: 2;
+}
+
+.item{
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.item.active{
+    display: block;
+}
+
+.bars{
+    background: lightgray;
+    display: inline-block;
+    height: 3px;
+    position: relative;
+    width: 18px;
+}
+
+.bars::before,.bars::after{
+    background: lightgray;
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 18px;
+    content: "";
+}
+.bars::before{
+    top: 5px;
+}
+.bars::after{
+    top: -5px;
+}
+
+
+
+/* ================================= 
+  Paw Print Banner
+==================================== */
+
+.first {
+    animation: pawAnimation 2s linear infinite;
+    transform: translateY(100px);
+}
+  
+  .second {
+    animation: pawAnimation 2s linear infinite /*delay*/0.2s;
+    transform: translate(50px, 100px);
+}
+  
+  .third {
+    animation: pawAnimation 2s linear infinite 0.4s;
+    transform: translate(-50px, 10px);
+  }
+  
+  .fourth {
+    animation: pawAnimation 2s linear infinite 0.6s;
+  }
+  .paw {
+    opacity: 0;
+    width: 60px;
+    heigth: 60px;
+  }
+  
+  @keyframes pawAnimation {
+  /*   20%  {opacity: 0;}
+    70% {opacity: 0;}
+    90% {opacity: 1;} */
+    
+    0% {opacity: 1;}
+    40% {opacity: 0;}
+  }
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media screen and (min-width:468px){
+    .menu{
+        justify-content: center;
+    }
+    .logo{
+        flex: 1;
+    }
+    .item.button{
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .toggle{
+        order: 2;
+    }
+    .button.secondary{
+        border: 0;
+    }
+    .button a{
+        padding: 7px 15px;
+        background: greenyellow;
+        border: 1px solid green;
+        border-radius: 50em;
+        color: darkgreen;
+        text-decoration: none;  
+    }
+    .button.secondary a{
+        background: transparent;
+    }
+
+    .button a:hover{
+        transition: .25s;
+    }
+    .button:not(.secondary) a:hover{
+        background: yellow;
+        border-color: darkgreen;
+    }
+
+    .button.secondary a:hover{
+        color: yellow;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .item{
+        display: block;
+        width: auto;
+    }
+    .toggle{
+        display: none;
+    }
+    .logo{
+        order: 0;
+    }
+    .item{
+        order: 1;
+    }
+    .button{
+        order: 2;
+    }
+    
+    .menu li{
+        padding: 15px 15px;
+    }
+
+    .menu li.button{
+        padding-right: 0;
+    }
+}
+
+
