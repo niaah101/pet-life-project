@@ -34,12 +34,16 @@ banner {
     display: flex;
     height: 15em;
     margin: auto;
-    padding: 15px 15px;
+    padding: 15px 10px;
+    background-color: khaki;
 } 
 
 h2 {
-    color:pink;
+    color: pink;
+    text-align: center;
+    padding-bottom: 10px;
 }
+
 /* ================================= 
   Class Styles
 ==================================== */
@@ -70,38 +74,44 @@ h2 {
     display: flex;
     height: 7em;
     margin: auto;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     justify-content: center;
     color:  rgb(176, 168, 175);
+    background-color: aliceblue;
 }
 
 .shorkie{
     margin: auto;
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-family: 'Yellowtail', cursive;
+    flex-direction: column;
 }
 
 .main-content{
     display: flex;
+    justify-content: space-between;
+    margin: 40px auto 0 auto;
+    flex-wrap: wrap;
 }
 
 
 .column {
     font-size: 1em;
     color:grey;
-    flex: 1;
-    justify-content: space-between;
+    box-sizing: border-box;
+    /*flex: 1;*/
     flex-basis: 30%;
+    padding: 10px 15px;
 }
 
 .column:nth-child(1){
-    background: lightyellow;
+    background-color: aquamarine;
 }
 .column:nth-child(2){
-    background: lightskyblue;
+    background-color: cadetblue;
 }
 .column:nth-child(3){
-    background: lightseagreen;
+    background-color: coral;
 }
 
 
@@ -116,7 +126,7 @@ h2 {
     align-items: center;
 }
 
-.toggle{
+.hamburger{
     order: 1;
     cursor: pointer;
 }
